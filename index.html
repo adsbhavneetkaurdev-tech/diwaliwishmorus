@@ -80,26 +80,29 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,9vw,3.6rem);l
 .stage{position:relative;width:100%;
   height:clamp(430px, calc(100svh - 215px), 640px);
   margin-top:6px}
-.logo{position:absolute;left:50%;top:50%;width:min(66%,300px);height:auto;transform:translate(-50%,-50%);
+.logo{margin:0;position:absolute;left:50%;top:50%;width:min(64%,300px);display:flex;flex-direction:column;align-items:center;transform:translate(-50%,-50%);
   user-select:none;-webkit-user-drag:none;pointer-events:none;
   opacity:calc(.22 + .78*var(--p));
   filter:drop-shadow(0 0 calc(2px + 22px*var(--p)) rgba(255,170,70,calc(.1 + .7*var(--p)))) saturate(calc(.55 + .45*var(--p)));
   transition:opacity 1.4s ease, filter 1.4s ease}
+.logo img{display:block;width:100%;height:auto;-webkit-user-drag:none}
+.logo .lt{width:76%}
+.logo .amp{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--gold);font-size:clamp(1.5rem,6.5vw,2.4rem);line-height:1;margin:.12em 0 .18em}
 .logo.celebrate{animation:logoPulse 2.4s ease-in-out 1}
 @keyframes logoPulse{0%,100%{transform:translate(-50%,-50%) scale(1)}40%{transform:translate(-50%,-50%) scale(1.06)}}
 
 /* diya spots: mobile positions (portrait) */
 .spot{position:absolute;left:var(--x);top:var(--y);width:var(--diya);height:var(--diya);transform:translate(-50%,-50%)}
-.spot:nth-of-type(1){--x:15%;--y:25%} .spot:nth-of-type(2){--x:41%;--y:16%}
-.spot:nth-of-type(3){--x:66%;--y:31%} .spot:nth-of-type(4){--x:86%;--y:19%}
-.spot:nth-of-type(5){--x:85%;--y:70%} .spot:nth-of-type(6){--x:62%;--y:85%}
-.spot:nth-of-type(7){--x:36%;--y:69%} .spot:nth-of-type(8){--x:13%;--y:81%}
+.spot:nth-of-type(1){--x:15%;--y:23%} .spot:nth-of-type(2){--x:41%;--y:14%}
+.spot:nth-of-type(3){--x:66%;--y:27%} .spot:nth-of-type(4){--x:86%;--y:16%}
+.spot:nth-of-type(5){--x:85%;--y:74%} .spot:nth-of-type(6){--x:62%;--y:87%}
+.spot:nth-of-type(7){--x:36%;--y:73%} .spot:nth-of-type(8){--x:13%;--y:81%}
 @media (min-width:700px) and (min-aspect-ratio:1/1){
   :root{--diya:clamp(84px,9vw,118px)}
   .stage{height:clamp(420px, calc(100svh - 230px), 680px)}
-  .logo{width:min(40%,460px)}
+  .logo{width:min(38%,440px)}
   .spot:nth-of-type(1){--x:10%;--y:46%}  .spot:nth-of-type(2){--x:24%;--y:22%}
-  .spot:nth-of-type(3){--x:49%;--y:19%} .spot:nth-of-type(4){--x:75%;--y:25%}
+  .spot:nth-of-type(3){--x:49%;--y:17%} .spot:nth-of-type(4){--x:75%;--y:25%}
   .spot:nth-of-type(5){--x:91%;--y:48%} .spot:nth-of-type(6){--x:79%;--y:81%}
   .spot:nth-of-type(7){--x:52%;--y:87%} .spot:nth-of-type(8){--x:20%;--y:78%}
 }
@@ -247,7 +250,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold)}
   </header>
 
   <div class="stage" id="stage">
-    <img class="logo" id="logo" src="logo.png" alt="Morus AI by Le Techie" width="1000" height="249">
+    <figure class="logo" id="logo" role="img" aria-label="Morus AI and Le Techie"><img src="morusai.png" alt="" width="1000" height="176"><span class="amp" aria-hidden="true">&amp;</span><img class="lt" src="letechie.png" alt="" width="677" height="110"></figure>
     <!-- spots injected by JS -->
   </div>
 
