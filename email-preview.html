@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Diwali email image (1200×800)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#0d0b24}
+#card{position:relative;width:1200px;height:800px;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#fff3dc;
+  background:
+    radial-gradient(60% 50% at 50% 54%, rgba(255,160,60,.20) 0%, rgba(255,120,40,.08) 45%, transparent 75%),
+    radial-gradient(120% 80% at 50% 115%, #3a1a4a 0%, transparent 60%),
+    linear-gradient(180deg,#0d0b24 0%,#1a1240 55%,#2a1650 100%)}
+.rangoli{position:absolute;left:600px;top:430px;width:1000px;height:1000px;transform:translate(-50%,-50%);opacity:.05;color:#f6c453}
+h1{position:absolute;top:36px;left:0;right:0;margin:0;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;
+  font-size:104px;line-height:1;color:#f6c453;text-shadow:0 0 30px rgba(246,196,83,.35)}
+.sub{position:absolute;top:158px;left:0;right:0;margin:0;text-align:center;font-size:38px;font-weight:500;color:#fff3dc;letter-spacing:.005em}
+.logo{position:absolute;left:600px;top:440px;width:520px;transform:translate(-50%,-50%);
+  filter:drop-shadow(0 0 18px rgba(255,170,70,.45))}
+.cta{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:34px;font-weight:600;color:#2a1206;
+  padding:16px 40px;border-radius:999px;background:linear-gradient(180deg,#ffc95e,#ff9a2e);box-shadow:0 0 30px rgba(255,160,60,.35)}
+.spot{position:absolute;width:150px;height:150px;transform:translate(-50%,-50%)}
+.spot svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.glow{position:absolute;left:50%;top:48%;width:240%;height:240%;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,190,90,.55),rgba(255,140,40,.2) 45%,transparent 75%)}
+.flame,.core{transform-box:fill-box;transform-origin:50% 100%}
+.unlit .flame-wrap,.unlit .glow,.unlit .clay-lit{display:none}
+.lit .ember{display:none}
+.unlit .ring{position:absolute;left:50%;top:64%;width:86%;height:38%;transform:translate(-50%,-50%);border-radius:50%;border:2px solid rgba(246,196,83,.45)}
+.dots circle{fill:#d9a441}
+.unlit .dots circle{opacity:.35}
+</style>
+</head>
+<body>
+<div id="card">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="clayDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2f1c"/><stop offset="1" stop-color="#26120a"/></linearGradient>
+      <linearGradient id="clayLit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d0743a"/><stop offset=".55" stop-color="#a24a20"/><stop offset="1" stop-color="#5c2410"/></linearGradient>
+      <radialGradient id="oil" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#6b3a12"/><stop offset="1" stop-color="#2b1407"/></radialGradient>
+      <radialGradient id="flameOuter" cx=".5" cy=".8" r=".8"><stop offset="0" stop-color="#fff2b0"/><stop offset=".35" stop-color="#ffc23d"/><stop offset=".7" stop-color="#ff8a1f"/><stop offset="1" stop-color="#e2531a" stop-opacity=".85"/></radialGradient>
+      <radialGradient id="flameCore" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#fff4c2"/><stop offset="1" stop-color="#ffd76a"/></radialGradient>
+    </defs>
+  </svg>
+  <svg class="rangoli" viewBox="-100 -100 200 200" id="rangoli"></svg>
+  <h1>Happy Diwali 🪔</h1>
+  <p class="sub">Thank you for being part of our Diwali celebration</p>
+  <img class="logo" src="logo.png" alt="">
+  <div class="cta">Tap to light the diyas →</div>
+</div>
+<script>
+// [x, y, lit]
+var SPOTS=[[135,330,1],[290,265,0],[165,575,0],[330,618,1],[1065,330,0],[905,262,1],[1040,580,1],[870,618,0]];
+var card=document.getElementById("card");
+(function(){var s=document.getElementById("rangoli"),h="";
+  for(var i=0;i<16;i++){var a=i*22.5;h+='<ellipse cx="0" cy="-62" rx="9" ry="24" transform="rotate('+a+')" fill="none" stroke="currentColor" stroke-width=".8"/>';}
+  for(var j=0;j<8;j++){h+='<path d="M0 -20 Q12 -34 0 -46 Q-12 -34 0 -20Z" transform="rotate('+(j*45)+')" fill="none" stroke="currentColor" stroke-width=".8"/>';}
+  h+='<circle r="16" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="84" fill="none" stroke="currentColor" stroke-width=".6"/>';s.innerHTML=h;})();
+function diyaSVG(){var dots="";for(var k=0;k<7;k++){var x=22+k*9.33,y=72+Math.sin((k/6)*Math.PI)*4;dots+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="1.8"/>';}
+  return '<svg viewBox="0 0 100 100"><g class="flame-wrap"><g class="flame"><path d="M50 54 C37 47 39 31 50 7 C61 31 63 47 50 54Z" fill="url(#flameOuter)"/><g class="core"><path d="M50 53 C44 49 45 40 50 28 C55 40 56 49 50 53Z" fill="url(#flameCore)"/></g></g></g>'+
+  '<ellipse cx="50" cy="90" rx="17" ry="3.5" fill="#1a0c06"/><path d="M7 61 C9 80 28 89 50 89 C72 89 91 80 93 61Z" fill="url(#clayDark)"/><path class="clay-lit" d="M7 61 C9 80 28 89 50 89 C72 89 91 80 93 61Z" fill="url(#clayLit)"/>'+
+  '<g class="dots">'+dots+'</g><ellipse cx="50" cy="61" rx="43" ry="7.5" fill="#3a1d10"/><ellipse class="clay-lit" cx="50" cy="61" rx="43" ry="7.5" fill="#b8612d"/>'+
+  '<ellipse cx="50" cy="61.5" rx="37" ry="5" fill="url(#oil)"/><path d="M50 61 Q48.5 57 50 53" stroke="#2a160b" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle class="ember" cx="50" cy="53" r="2" fill="#ff7a2a" opacity=".7"/></svg>';}
+var flames=[];
+SPOTS.forEach(function(s,i){var d=document.createElement("div");d.className="spot "+(s[2]?"lit":"unlit");d.style.left=s[0]+"px";d.style.top=s[1]+"px";
+  d.innerHTML=(s[2]?'<div class="glow"></div>':'<div class="ring"></div>')+diyaSVG();card.appendChild(d);
+  if(s[2])flames.push({el:d.querySelector(".flame"),core:d.querySelector(".core"),glow:d.querySelector(".glow"),ph:i*1.7+0.4});});
+// deterministic, seamlessly looping flicker; t in [0,1)
+var TAU=Math.PI*2;
+function setFrame(t){flames.forEach(function(f){var p=f.ph;
+  var sy=1+.06*Math.sin(TAU*(2*t)+p)+.03*Math.sin(TAU*(5*t)+p*2.1);
+  var sx=1-.04*Math.sin(TAU*(2*t)+p+.5)+.02*Math.sin(TAU*(7*t)+p);
+  var sk=3*Math.sin(TAU*(3*t)+p*1.3)+1.2*Math.sin(TAU*(4*t)+p*.7);
+  f.el.setAttribute("style","transform:scale("+sx.toFixed(4)+","+sy.toFixed(4)+") skewX("+sk.toFixed(3)+"deg)");
+  var cy=1+.07*Math.sin(TAU*(4*t)+p*1.9),cx=1-.05*Math.sin(TAU*(3*t)+p*.4);
+  f.core.setAttribute("style","transform:scale("+cx.toFixed(4)+","+cy.toFixed(4)+")");
+});}
+setFrame(0);
+window.setFrame=setFrame;
+</script>
+</body>
+</html>
